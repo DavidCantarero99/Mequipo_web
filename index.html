@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml"
+    href="https://res.cloudinary.com/dwikid1wv/image/upload/v1771517242/favicon_rrzgdh.svg" />
+  <title>MEQUIPO | Distribuidor Master Skymsen en México</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mequipo.com/" />
+  <meta property="og:title" content="MEQUIPO | Distribuidor Master Skymsen en México" />
+  <meta property="og:description"
+    content="Liderazgo en Equipamiento Industrial. Tu Socio en Maquinaria Gastronómica." />
+  <meta property="og:image"
+    content="https://res.cloudinary.com/dwikid1wv/image/upload/c_fill,w_800,h_800/v1771020110/DB-10v3_qrkggs.webp" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://mequipo.com/" />
+  <meta property="twitter:title" content="MEQUIPO | Distribuidor Master Skymsen en México" />
+  <meta property="twitter:description"
+    content="Liderazgo en Equipamiento Industrial. Tu Socio en Maquinaria Gastronómica." />
+  <meta property="twitter:image"
+    content="https://res.cloudinary.com/dwikid1wv/image/upload/c_fill,w_800,h_800/v1771020110/DB-10v3_qrkggs.webp" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Added Cairo as a fallback since MontaserArabic is a custom font. Cairo shares a similar geometric aesthetic. -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#c70812",
+            "primary-dark": "#a2070f",
+            "background-light": "#ffffff",
+            "background-dark": "#000000",
+            "border-light": "#e5e5e5",
+            "border-dark": "#333333",
+            "text-dark": "#000000",
+          },
+          fontFamily: {
+            sans: ["MontaserArabic", "Cairo", "sans-serif"],
+            display: ["MontaserArabic", "Cairo", "sans-serif"],
+          },
+          letterSpacing: {
+            tightest: '-.075em',
+            tighter: '-.05em',
+            tight: '-.025em',
+            normal: '0',
+            wide: '.025em',
+            wider: '.05em',
+            widest: '.1em',
+            ultra: '.25em',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Setup for MontaserArabic */
+    @font-face {
+      font-family: 'MontaserArabic';
+      src: local('MontaserArabic'), local('Montaser Arabic');
+    }
+
+    body {
+      font-family: 'MontaserArabic', 'Cairo', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Industrial Grid Texture */
+    .industrial-grid {
+      background-image: radial-gradient(#e5e5e5 0.5px, transparent 0.5px);
+      background-size: 24px 24px;
+    }
+
+    .dark .industrial-grid {
+      background-image: radial-gradient(#333333 0.5px, transparent 0.5px);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #ffffff;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #e5e5e5;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c70812;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/index.css">
+  <!-- GitHub Pages SPA: restore redirect from 404.html -->
+  <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+        // Also handle ?p= query param from 404.html
+        var l = window.location;
+        if (l.search[1] === 'p') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (decoded[0] ? '/' + decoded[0] : '') +
+            (decoded[1] ? '?' + decoded[1] : '') +
+            l.hash
+          );
+        }
+      })();
+  </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/Mequipo_web/assets/index-Bm6Qw8uo.js"></script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-text-dark dark:text-white transition-colors duration-300">
+  <div id="root"></div>
+</body>
+
+</html>
