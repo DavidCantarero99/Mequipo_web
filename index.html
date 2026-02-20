@@ -122,6 +122,28 @@
 }
 </script>
   <link rel="stylesheet" href="/index.css">
+  <!-- GitHub Pages SPA: restore redirect from 404.html -->
+  <script>
+      (function () {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+        // Also handle ?p= query param from 404.html
+        var l = window.location;
+        if (l.search[1] === 'p') {
+          var decoded = l.search.slice(1).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (decoded[0] ? '/' + decoded[0] : '') +
+            (decoded[1] ? '?' + decoded[1] : '') +
+            l.hash
+          );
+        }
+      })();
+  </script>
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-text-dark dark:text-white transition-colors duration-300">
