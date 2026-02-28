@@ -81,9 +81,9 @@ export const Header: React.FC = () => {
             <a
               href="#tienda"
               aria-label="Visitar tienda en línea"
-              className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-primary to-red-700 hover:from-red-700 hover:to-primary shadow-md shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 group relative overflow-hidden"
+              className="hidden lg:inline-flex items-center gap-2 px-4 h-9 rounded-lg text-xs font-bold uppercase tracking-wider text-white bg-gradient-to-r from-primary to-red-700 hover:from-red-700 hover:to-primary shadow-md shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 group relative overflow-hidden"
             >
-              <span className="absolute inset-0 rounded-xl ring-2 ring-primary/40 animate-ping opacity-30 pointer-events-none" />
+              <span className="absolute inset-0 rounded-lg ring-2 ring-primary/40 animate-ping opacity-30 pointer-events-none" />
               <span className="material-symbols-outlined text-base group-hover:rotate-12 transition-transform duration-300">storefront</span>
               Visitar Tienda
               <span className="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-1.5 py-0.5 rounded-full leading-none">
@@ -96,7 +96,7 @@ export const Header: React.FC = () => {
                 variant="primary"
                 size="sm"
                 icon="person"
-                className="hidden lg:inline-flex"
+                className="hidden lg:inline-flex h-9"
                 as="div"
               >
                 Acceso Distribuidores

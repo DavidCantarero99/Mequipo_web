@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../ui/Button";
 import { SEO } from "../common/SEO";
+import { text } from "stream/consumers";
 
 const CONTACT_INFO = [
   {
@@ -9,10 +10,9 @@ const CONTACT_INFO = [
     lines: [
       {
         text: "Av. Presidente Masaryk 61, Int. 901",
+        sublines: ["Col. Polanco V Sección", "Miguel Hidalgo, CDMX"],
         href: "https://maps.google.com/?q=Av.+Pdte.+Masaryk+61+Int.+901+Polanco+Miguel+Hidalgo+CDMX"
-      },
-      { text: "Col. Polanco V Sección" },
-      { text: "Miguel Hidalgo, CDMX" }
+      }
     ]
   },
   {
@@ -27,7 +27,7 @@ const CONTACT_INFO = [
     icon: "mail",
     title: "Departamentos",
     lines: [
-      { text: "Ventas: ventas@mequipo.com", href: "mailto:ventas@mequipo.com" },
+      { prefix: "Ventas ", text: "ventas@mequipo.com", href: "mailto:ventas@mequipo.com" },
     ]
   }
 ];
@@ -72,15 +72,20 @@ export const ContactPage: React.FC = () => {
                     <div className="space-y-1">
                       {item.lines.map((line, lineIdx) => (
                         line.href ? (
-                          <a
-                            key={lineIdx}
-                            href={line.href}
-                            target={line.href.startsWith("http") ? "_blank" : undefined}
-                            rel={line.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                            className="block text-text-dark/70 dark:text-white/70 font-medium hover:text-primary dark:hover:text-primary transition-colors duration-200 underline-offset-2 hover:underline"
-                          >
-                            {line.text}
-                          </a>
+                          <p key={lineIdx} className="text-text-dark/70 dark:text-white/70 font-medium">
+                            {(line as any).prefix && <span>{(line as any).prefix}</span>}
+                            <a
+                              href={line.href}
+                              target={line.href.startsWith("http") ? "_blank" : undefined}
+                              rel={line.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                              className="hover:text-primary dark:hover:text-primary transition-colors duration-200 underline-offset-2 hover:underline"
+                            >
+                              <span className="block">{line.text}</span>
+                              {(line as any).sublines?.map((sub: string, si: number) => (
+                                <span key={si} className="block">{sub}</span>
+                              ))}
+                            </a>
+                          </p>
                         ) : (
                           <p key={lineIdx} className="text-text-dark/70 dark:text-white/70 font-medium">
                             {line.text}
