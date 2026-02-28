@@ -93,7 +93,7 @@ export const Header: React.FC = () => {
 
             <Link to="/distribuidores">
               <Button
-                variant="primary"
+                variant="secondary"
                 size="sm"
                 icon="person"
                 className="hidden lg:inline-flex h-9"
@@ -193,13 +193,13 @@ export const Header: React.FC = () => {
               <div className="p-5 rounded-xl bg-gray-100 dark:bg-white/5 border border-border-light dark:border-border-dark mt-auto">
                 <p className="text-xs font-bold uppercase text-gray-400 mb-3 tracking-widest">Contacto Rápido</p>
                 <div className="space-y-3">
-                  <a href="tel:+525580000000" className="flex items-center gap-3 text-text-dark dark:text-white hover:text-primary transition-colors">
+                  <a href="tel:+525599903546" className="flex items-center gap-3 text-text-dark dark:text-white hover:text-primary transition-colors">
                     <span className="material-symbols-outlined text-primary text-xl">call</span>
-                    <span className="font-bold">+52 (55) 8000 0000</span>
+                    <span className="font-bold">+52 (55) 9990 3546</span>
                   </a>
-                  <a href="mailto:ventas@mequipo.com.mx" className="flex items-center gap-3 text-text-dark dark:text-white hover:text-primary transition-colors">
+                  <a href="mailto:ventas@mequipo.com" className="flex items-center gap-3 text-text-dark dark:text-white hover:text-primary transition-colors">
                     <span className="material-symbols-outlined text-primary text-xl">mail</span>
-                    <span className="text-sm">ventas@mequipo.com.mx</span>
+                    <span className="text-sm">ventas@mequipo.com</span>
                   </a>
                 </div>
               </div>

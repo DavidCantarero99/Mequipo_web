@@ -12,7 +12,7 @@ import { ContactPage } from "./components/contact/ContactPage";
 import { ScrollToTop } from "./components/common/ScrollToTop"; // Import ScrollToTop
 import { SEO } from "./components/common/SEO";
 
-import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 const App: React.FC = () => {
   return (

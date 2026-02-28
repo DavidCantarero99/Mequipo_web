@@ -9,6 +9,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   icon?: string;
   className?: string;
+  as?: React.ElementType;
 }
 
 export interface NavLink {
