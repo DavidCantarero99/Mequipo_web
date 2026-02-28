@@ -77,13 +77,27 @@ export const Header: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4">
+            {/* Store Button — update href when the store is ready */}
+            <a
+              href="#tienda"
+              aria-label="Visitar tienda en línea"
+              className="hidden lg:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-primary to-red-700 hover:from-red-700 hover:to-primary shadow-md shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 group relative overflow-hidden"
+            >
+              <span className="absolute inset-0 rounded-xl ring-2 ring-primary/40 animate-ping opacity-30 pointer-events-none" />
+              <span className="material-symbols-outlined text-base group-hover:rotate-12 transition-transform duration-300">storefront</span>
+              Visitar Tienda
+              <span className="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-1.5 py-0.5 rounded-full leading-none">
+                Próximamente
+              </span>
+            </a>
+
             <Link to="/distribuidores">
               <Button
                 variant="primary"
                 size="sm"
                 icon="person"
                 className="hidden lg:inline-flex"
-                as="div" // Assuming Button handles 'as' or wrapping logic, but Button is button. I should check Button. But wait, Button is just a button. I'll wrap it in Link.
+                as="div"
               >
                 Acceso Distribuidores
               </Button>
@@ -150,6 +164,20 @@ export const Header: React.FC = () => {
             </nav>
 
             <div className="mt-8 space-y-6">
+              {/* Store Button mobile — update href when the store is ready */}
+              <a
+                href="#tienda"
+                aria-label="Visitar tienda en línea"
+                className="flex items-center justify-center gap-3 w-full py-4 px-6 rounded-xl font-bold text-base text-white bg-gradient-to-r from-primary to-red-700 hover:from-red-700 hover:to-primary shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 group relative overflow-hidden"
+              >
+                <span className="absolute inset-0 rounded-xl ring-2 ring-primary/40 animate-ping opacity-30 pointer-events-none" />
+                <span className="material-symbols-outlined text-xl group-hover:rotate-12 transition-transform duration-300">storefront</span>
+                Visitar Nuestra Tienda
+                <span className="ml-auto text-[10px] font-black uppercase tracking-widest bg-white text-primary px-2 py-1 rounded-full leading-none">
+                  Próximamente
+                </span>
+              </a>
+
               <Link to="/distribuidores" className="block">
                 <Button
                   variant="primary"

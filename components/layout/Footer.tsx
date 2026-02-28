@@ -36,6 +36,21 @@ export const Footer: React.FC = () => {
             Somos distribuidores master autorizados de Skymsen en México.
           </p>
 
+          {/* Store CTA — update href when the store is ready */}
+          <a
+            href="#tienda"
+            aria-label="Visitar tienda en línea"
+            className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-bold text-base text-white bg-gradient-to-r from-primary to-red-700 hover:from-red-700 hover:to-primary shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-all duration-300 hover:scale-105 active:scale-95 group relative overflow-hidden"
+          >
+            {/* Subtle pulse ring */}
+            <span className="absolute inset-0 rounded-xl ring-2 ring-primary/40 animate-ping opacity-30 pointer-events-none" />
+            <span className="material-symbols-outlined text-xl group-hover:rotate-12 transition-transform duration-300">storefront</span>
+            <span>Visitar Nuestra Tienda</span>
+            <span className="text-[10px] font-black uppercase tracking-widest bg-white text-primary px-2 py-1 rounded-full leading-none">
+              Próximamente
+            </span>
+          </a>
+
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 w-full">
             <a href="mailto:ventas@mequipo.com" className="flex items-center gap-3 text-gray-400 hover:text-primary transition-colors duration-300 group">

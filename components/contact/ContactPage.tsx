@@ -7,25 +7,27 @@ const CONTACT_INFO = [
     icon: "storefront",
     title: "Showroom & Corporativo",
     lines: [
-      "Av. Presidente Masaryk 61, Int. 901",
-      "Col. Polanco V Sección",
-      "Miguel Hidalgo, CDMX"
+      {
+        text: "Av. Presidente Masaryk 61, Int. 901",
+        href: "https://maps.google.com/?q=Av.+Pdte.+Masaryk+61+Int.+901+Polanco+Miguel+Hidalgo+CDMX"
+      },
+      { text: "Col. Polanco V Sección" },
+      { text: "Miguel Hidalgo, CDMX" }
     ]
   },
   {
     icon: "call",
     title: "Línea Directa",
     lines: [
-      "+52 (55) 99903546",
-      "Lunes a Sábado: 8:00 AM - 5:00 PM"
+      { text: "+52 (55) 99903546", href: "tel:+525599903546" },
+      { text: "Lunes a Sábado: 8:00 AM - 5:00 PM" }
     ]
   },
   {
     icon: "mail",
     title: "Departamentos",
     lines: [
-      "Ventas: ventas@mequipo.com",
-      //"Soporte: soporte@mequipo.com.mx"
+      { text: "Ventas: ventas@mequipo.com", href: "mailto:ventas@mequipo.com" },
     ]
   }
 ];
@@ -69,15 +71,28 @@ export const ContactPage: React.FC = () => {
                     <h3 className="text-xl font-bold text-text-dark dark:text-white mb-2">{item.title}</h3>
                     <div className="space-y-1">
                       {item.lines.map((line, lineIdx) => (
-                        <p key={lineIdx} className="text-text-dark/70 dark:text-white/70 font-medium">
-                          {line}
-                        </p>
+                        line.href ? (
+                          <a
+                            key={lineIdx}
+                            href={line.href}
+                            target={line.href.startsWith("http") ? "_blank" : undefined}
+                            rel={line.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                            className="block text-text-dark/70 dark:text-white/70 font-medium hover:text-primary dark:hover:text-primary transition-colors duration-200 underline-offset-2 hover:underline"
+                          >
+                            {line.text}
+                          </a>
+                        ) : (
+                          <p key={lineIdx} className="text-text-dark/70 dark:text-white/70 font-medium">
+                            {line.text}
+                          </p>
+                        )
                       ))}
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+
 
             <div className="pt-8 border-t border-border-light dark:border-border-dark space-y-4">
               <h4 className="text-sm font-bold uppercase tracking-widest text-text-dark/50 dark:text-white/50 mb-4">

@@ -88,28 +88,28 @@ export const MaintenancePage: React.FC = () => {
           <div className="grid md:grid-cols-2 gap-6">
             {[
               {
-                q: "¿Con qué frecuencia debo afilar las cuchillas?",
-                a: "Depende del uso, pero recomendamos revisarlas mensualmente. Si notas que el corte pierde precisión o el producto se magulla, es momento de afilarlas o reemplazarlas."
+                q: "¿Cómo sé qué accesorio o disco de corte necesito para mi equipo?",
+                a: "Cada accesorio está identificado por el tipo de función y las dimensiones compatibles. Compártenos el modelo de tu equipo y lo que necesitas lograr, y te orientamos para elegir la pieza correcta."
               },
               {
-                q: "¿Cómo valido mi garantía?",
-                a: "Solo necesitas tu factura de compra y contactarnos. Como Master Distributor, gestionamos tu garantía directamente con fábrica para darte respuesta inmediata."
+                q: "¿Con qué frecuencia debo revisar los componentes de corte o contacto con alimentos?",
+                a: "Recomendamos una revisión mensual. Si el rendimiento disminuye o el resultado final pierde calidad y uniformidad, es señal de que algún componente requiere mantenimiento o reemplazo."
               },
               {
-                q: "¿Qué tipo de lubricante debo usar?",
-                a: "Utiliza únicamente lubricantes grado alimenticio (food-grade) para asegurar la inocuidad de tus alimentos y proteger los componentes internos."
+                q: "¿Cómo valido la garantía de mi equipo?",
+                a: "Solo necesitas tu factura de compra original. Nosotros gestionamos la garantía directamente con fábrica para darte una respuesta rápida y sin trámites complicados."
               },
               {
-                q: "¿Por qué mi equipo se detiene repentinamente?",
-                a: "La mayoría de nuestros equipos cuentan con sensores de seguridad. Verifica que la tapa esté bien cerrada y que no haya obstrucciones. Si persiste, contáctanos."
+                q: "¿Por qué mi equipo pierde rendimiento con el uso?",
+                a: "El desgaste natural de componentes internos como filtros, sellos o discos puede reducir el rendimiento. Un diagnóstico oportuno y el reemplazo con refacciones originales restaura el desempeño de fábrica."
               },
               {
-                q: "¿Tienen refacciones para modelos antiguos?",
-                a: "Sí, mantenemos un stock activo de refacciones incluso para modelos descontinuados. Envíanos el modelo y número de serie para verificar disponibilidad."
+                q: "¿Por qué mi equipo se detiene de forma inesperada durante el servicio?",
+                a: "La mayoría de nuestros equipos cuentan con protección térmica automática. Verifica que no haya sobrecarga, que los componentes estén bien ensamblados y que el equipo tenga ventilación adecuada. Si el problema persiste, contáctanos."
               },
               {
-                q: "¿Realizan visitas técnicas a domicilio?",
-                a: "Contamos con una red de técnicos certificados en las principales ciudades del país. Para zonas remotas, ofrecemos asistencia guiada por videollamada."
+                q: "¿Cuentan con refacciones para toda la línea de equipos?",
+                a: "Sí. Contamos con un amplio catálogo de refacciones originales que incluye componentes eléctricos, mecánicos y de desgaste. Compártenos el modelo y número de serie de tu equipo para verificar disponibilidad."
               }
             ].map((faq, i) => (
               <div key={i} className="bg-white dark:bg-[#171717] p-6 rounded-xl border border-border-light dark:border-border-dark hover:border-primary/50 transition-colors group">
