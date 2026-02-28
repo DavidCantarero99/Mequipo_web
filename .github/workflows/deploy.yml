@@ -35,6 +35,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          VITE_BASE_PATH: /Mequipo_web/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
